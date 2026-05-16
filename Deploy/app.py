@@ -200,11 +200,8 @@ section[data-testid="stSidebar"] .stNumberInput label {
 # ─────────────────────────────────────────
 @st.cache_resource
 def load_model():
-   model_path = os.path.join(
-    os.path.dirname(__file__),
-    "logistic_churn_model.pkl"
-)
-    if os.path.exists(model_path):
+   model_path = os.path.join(os.path.dirname(__file__),"logistic_churn_model.pkl")
+   if os.path.exists(model_path):
         return joblib.load(model_path)
     return None
 
