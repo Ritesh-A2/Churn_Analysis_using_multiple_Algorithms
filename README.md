@@ -1,5 +1,6 @@
 # 🧠 Customer Churn Prediction Using Machine Learning
 
+
 ## ❗ Problem Statement
 Customer churn is one of the biggest challenges faced by subscription-based and service-oriented businesses. Churn occurs when customers stop using a company's products or services, leading to revenue loss and reduced customer retention.
 
@@ -14,6 +15,7 @@ The major challenge is to identify customers who are likely to leave the company
 * **Discover** hidden customer groups using clustering algorithms.
 
 ---
+
 ## 🌐 Model Deployment & Live Demo
 The trained model is fully deployed and available for real-time predictions. You can interact with the live application here:
 
@@ -23,6 +25,7 @@ The trained model is fully deployed and available for real-time predictions. You
 1. Clone the repository: `git clone <repo-url>`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run the app: `streamlit run app.py`
+
 ---
 
 ## 📌 Dataset Overview
@@ -52,7 +55,7 @@ EDA was performed to understand the structure and behavior of the dataset before
 ---
 
 ## 🐼 Data Preprocessing
-To ensure clean data pipeline delivery, the following steps were executed using automated automation pipelines:
+To ensure clean data pipeline delivery, the following steps were executed using automated pipelines:
 1. **Handling Missing Values** & cleaning inconsistent entries.
 2. **Removing Duplicates** to prevent data leakage.
 3. **Feature Encoding** for categorical variables via Column Transformers.
@@ -69,7 +72,6 @@ To ensure clean data pipeline delivery, the following steps were executed using 
 * **K-Nearest Neighbors (KNN):** Distance-based neighborhood classification.
 * **Support Vector Machine (SVM):** Optimizes hyperplanes for crisp class separation.
 * **Naive Bayes:** Probabilistic classification based on Bayes’ theorem.
-* **XGBoost Classifier:** Advanced high-performance gradient boosting.
 
 ### 🚀 Ensemble Learning (Advanced)
 * **Bagging:** Uses multiple estimators trained on random subsets.
@@ -84,32 +86,39 @@ To ensure clean data pipeline delivery, the following steps were executed using 
 ---
 
 ## 📈 Model Comparison & Evaluation
-Models were compared using **Accuracy, Precision, Recall, and F1-Score**.
+All models were thoroughly evaluated using **Accuracy, Precision, Recall, and F1-Score**. Below is the comprehensive performance comparison dashboard:
 
-| Model Type | Key Insights & Performance |
-| :--- | :--- |
-| **Traditional Models** | Provide baseline performance; Logistic Regression offered high interpretability. |
-| **Boosting (XGBoost/GBM)** | Significantly reduced false negatives (improved Recall for churners). |
-| **Stacking Classifier** | **Achieved the best overall performance** by combining strengths of individual models. |
+| Model | Accuracy | Precision | Recall | F1 Score |
+| :--- | :---: | :---: | :---: | :---: |
+| **Logistic Regression** | **0.8211** | 0.6861 | 0.5978 | **0.6389** |
+| **Stacking** | 0.8161 | 0.6862 | 0.5630 | 0.6185 |
+| **SVM** | 0.8140 | **0.7003** | 0.5201 | 0.5969 |
+| **AdaBoost** | 0.8133 | 0.6821 | 0.5522 | 0.6103 |
+| **Voting** | 0.8097 | 0.6966 | 0.4986 | 0.5812 |
+| **Gradient Boosting** | 0.8090 | 0.6721 | 0.5442 | 0.6014 |
+| **Random Forest (Tuned)** | 0.8048 | 0.6828 | 0.4906 | 0.5709 |
+| **Random Forest (Base)** | 0.7920 | 0.6492 | 0.4664 | 0.5429 |
+| **Bagging** | 0.7799 | 0.6225 | 0.4289 | 0.5079 |
+| **Decision Tree** | 0.7154 | 0.4623 | 0.4611 | 0.4617 |
+| **Naive Bayes** | 0.6657 | 0.4358 | **0.8927** | 0.5857 |
+
+### 💡 Key Performance Insights:
+* **Best All-Rounder:** **Logistic Regression** achieved the highest overall **Accuracy (82.11%)** and **F1-Score (63.89%)**, making it the most balanced model for this dataset.
+* **Ensemble Power:** Advanced techniques like **Stacking** and **AdaBoost** performed exceptionally close to the top, showing strong stability with accuracy over **81.3%**.
+* **Highest Churn Detection (Recall):** **Naive Bayes** delivered a massive **Recall of 89.27%**. If a business wants to ensure absolutely no churner goes unnoticed (minimizing false negatives), this model catches the most risk, though with a trade-off in precision.
+* **Most Precise:** **SVM** led with a **Precision of 70.03%**, meaning its flags for customer churn are the most reliable.
 
 ---
 
 ## ⚙️ Technologies Used
 * **Languages & Core:** Python, NumPy, Pandas
-* **Machine Learning:** Scikit-learn, XGBoost
+* **Machine Learning:** Scikit-learn, Ensemble Methods
 * **Visualization:** Matplotlib, Seaborn
 * **Deployment/UI:** Streamlit
 
 ---
 
-## 🌐 Model Deployment
-The final pipeline is structured for real-time predictions and can be deployed using:
-* **Streamlit** (Interactive Frontend)
-
-
----
-
 ## 🚀 Future Scope
-* Implementing Deep Learning Architectures (MLPs).
+* Implementing Deep Learning Architectures (MLPs) to study sequence behavior.
 * Designing real-time customer monitoring and automated retention trigger systems.
 * Cloud deployment with Explainable AI (XAI) integration for model transparency.
