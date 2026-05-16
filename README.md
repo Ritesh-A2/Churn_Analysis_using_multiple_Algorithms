@@ -14,6 +14,16 @@ The major challenge is to identify customers who are likely to leave the company
 * **Discover** hidden customer groups using clustering algorithms.
 
 ---
+## 🌐 Model Deployment & Live Demo
+The trained model is fully deployed and available for real-time predictions. You can interact with the live application here:
+
+👉 **[Live Streamlit Web App](https://churnanalysisusingmultiplealgorithms-je7wvbedzjzg3pgkmsnlbd.streamlit.app/)**
+
+### 🛠️ How to run locally:
+1. Clone the repository: `git clone <repo-url>`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the app: `streamlit run app.py`
+---
 
 ## 📌 Dataset Overview
 This dataset contains customer information collected from a telecom/service-based company. It includes detailed information about customers' demographics, subscription details, service usage, billing information, and account history.
